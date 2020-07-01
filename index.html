@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fase 2 - Antigüedad, Medioevo, Renacimiento</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+<!--Comparison table-->
+<!--https://codepen.io/adrianjacob/pen/wMGpeX-->
+  <style>
+    .comparison {
+      max-width:940px;
+      margin:0 auto;
+      font:13px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;
+      text-align:center;
+      padding:10px;
+    }
+
+    .comparison table {
+      width:100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: fixed;
+      border-bottom:1px solid #CCC;
+    }
+
+    .comparison td, .comparison th {
+      border-right:1px solid #CCC;
+      empty-cells: show;
+      padding:10px;
+    }
+
+    .compare-heading {
+      font-size:18px;
+      font-weight:bold !important;
+      border-bottom:0 !important;
+      padding-top:10px !important;
+    }
+
+    .comparison tbody tr:nth-child(odd) {
+      display:none;
+    }
+
+    .comparison .compare-row {
+      background:#F5F5F5;
+    }
+
+    .comparison .tickblue {
+      color:#0078C1;
+    }
+
+    .comparison .tickgreen {
+      color:#009E2C;
+    }
+
+    .comparison th {
+      font-weight:normal;
+      padding:0;
+      border-bottom:1px solid #CCC;
+    }
+
+    .comparison tr td:first-child {
+      text-align:left;
+    }
+      
+    .comparison .qbse, .comparison .qbo, .comparison .tl {
+      color:#FFF;
+      padding:10px;
+      font-size:13px;
+      border-right:1px solid #CCC;
+      border-bottom:0;
+    }
+
+    .comparison .tl2 {
+      border-right:0;
+    }
+
+    .comparison .qbse {
+      background:#0078C1;
+      border-top-left-radius: 3px;
+      border-left:0px;
+    }
+
+    .comparison .qbo {
+      background:#009E2C;
+      border-top-right-radius: 3px;
+      border-right:0px;
+    }
+
+    .comparison .price-info {
+      padding:5px 15px 15px 15px;
+    }
+
+    .comparison .price-was {
+      color:#999;
+      text-decoration: line-through;
+    }
+
+    .comparison .price-now, .comparison .price-now span {
+      color:#ff5406;
+    }
+
+    .comparison .price-now span {
+      font-size:32px;
+    }
+
+    .comparison .price-small {
+        font-size: 18px !important;
+        position: relative;
+        top: -11px;
+        left: 2px;
+    }
+
+    .comparison .price-buy {
+      background:#ff5406;
+      padding:10px 20px;
+      font-size:12px;
+      display:inline-block;
+      color:#FFF;
+      text-decoration:none;
+      border-radius:3px;
+      text-transform:uppercase;
+      margin:5px 0 10px 0;
+    }
+
+    .comparison .price-try {
+      font-size:12px;
+    }
+
+    .comparison .price-try a {
+      color:#202020;
+    }
+
+    @media (max-width: 767px) {
+      .comparison td:first-child, .comparison th:first-child {
+        display: none;
+      }
+      .comparison tbody tr:nth-child(odd) {
+        display:table-row;
+        background:#F7F7F7;
+      }
+      .comparison .row {
+        background:#FFF;
+      }
+      .comparison td, .comparison th {
+        border:1px solid #CCC;
+      }
+      .price-info {
+      border-top:0 !important;     
+      }      
+    }
+
+    @media (max-width: 639px) {
+      .comparison .price-buy {
+        padding:5px 10px;
+      }
+      .comparison td, .comparison th {
+        padding:10px 5px;
+      }
+      .comparison .hide-mobile {
+        display:none;
+      }
+      .comparison .price-now span {
+        font-size:16px;
+      }
+
+      .comparison .price-small {
+          font-size: 16px !important;
+          top: 0;
+          left: 0;
+      }
+      .comparison .qbse, .comparison .qbo {
+        font-size:12px;
+        padding:10px 5px;
+      }
+      .comparison .price-buy {
+        margin-top:10px;
+      }
+      .compare-heading {
+        font-size:13px;
+      }
+    }
+
+    /* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+  </style>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage - v2.1.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">UNAD</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          
+          <!--
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+ 
+          <li><a href="#contact">Contact</a></li>
+          -->
+        </ul>
+      </nav><!-- .nav-menu -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Escuela de Ciencias Sociales, Artes y Humanidades</h1>
+          <h2>Historia de la música occidental</h2>
+          <h2>Edwin Barragán Muñoz</h2>
+        </div>
+      </div>
+
+
+
+      
+      <div class="row icon-boxes">
+
+        
+        <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-ancient-pavilion-line "></i></div>
+            <h4 class="title"><a href="">Antigüedad</a></h4>
+            <p class="description">Alguien, sentado en una cueva, perfora un hueso vacío de tuétano, se lo lleva a la boca y sopla... en una flauta. La respiración se convierte en sonido, y el tiempo, a través del sonido, adquiere una forma. Siendo sonido y adquiriendo forma el tiempo, la música empieza[1].</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-vip-crown-line"></i></div>
+            <h4 class="title"><a href="">Medioevo</a></h4>
+            <p class="description">Los cantos medievales más antiguos brotaron del tiempo completo de la eterna uniformidad, que tan fácilmente trasmite, y, de igual modo, no existía en su interior una medida del tiempo: el ritmo. Después vino la medida. Y con ella vinieron los primeros compositores identificables y las primeras obras que se pueden datar con precisión[2].</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-palette-line"></i></div>
+            <h4 class="title"><a href="">Renacimiento</a></h4>
+            <p class="description">Como las otras artes y ciencias, la música estaba rebosante de nuevas ideas, y no era la menor de ellas el que la música debía ser juzgada, no de acuerdo con criterios sacados de antiguas filosofía, sino por cómo sonaba[3].</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+
+
+
+    <!-- ======= About Video Section ======= -->
+    <section id="about-video" class="about-video">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/about-video.jpg" class="img-fluid" alt="">
+            <a href="https://youtu.be/eBuV0l1H1rg" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+            <h3>Música Griega Antigua</h3>
+            <p class="font-italic">
+              La música de la Antigua Grecia era un arte que se encontraba presente en la sociedad de forma casi universal: en las celebraciones, funerales, en el teatro, a través de la música popular o mediante las baladas que presentaban los poemas épicos. Tenían, por tanto, una función importante en la vida de los habitantes de la Antigua Grecia. 
+              <!--https://es.wikipedia.org/wiki/M%C3%BAsica_de_la_Antigua_Grecia-->
+            </p>
+  
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Video Section -->
+
+
+
+
+
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Compositores</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Todos</li>
+              <li data-filter=".filter-app">Antigüedad</li>
+              <li data-filter=".filter-card">Medioevo</li>
+              <li data-filter=".filter-web">Renacimiento</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Elementos</h2>
+          
+        </div>
+
+        <div class="comparison">
+
+          <table>
+            <thead>
+
+              <tr>
+                <th class="tl"></th>
+                <th class="compare-heading">
+                  Antigüedad
+                </th>
+                <th class="compare-heading">
+                  Medioevo
+                </th>
+                <th class="compare-heading">
+                  Renacimiento
+                </th>
+
+              </tr>
+
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td colspan="3">Social</td>
+              </tr>
+              <tr class="compare-row">
+                <td>Social</td>
+                <td><span class="tickblue"></span></td>
+                <td>La sociedad medieval fue durante siglos una sociedad básicamente rural. En la Edad Media el noventa por ciento de la población vivía en el campo, centro de toda actividad y vida diaria para los habitantes de aquella época. Los monasterios, centro de oración, estudio y cultura, eran las residencias del clero. Suponían un elemento esencial en el paisaje medieval y es que no podemos olvidar la importancia que esta clase social tuvo no sólo como guía espiritual sino también por su influencia política, cultural, artística y social. </td>
+                <!--https://www.arteguias.com/sociedadmedieval.htm-->
+                <td>Si el auténtico renacimiento artístico tuvo sus orígenes en Florencia, también en la ciudad toscana se produjo el florecimiento de la filosofía social y política. Como respuesta a la lucha por la libertad cívica que los florentinos sostuvieron desde comienzos del siglo XV contra el despotismo de los Visconti, se tomó mayor conciencia de los asuntos políticos y se intensificaron los ideales republicanos de libertad y de participación cívica. Nació, de ese modo, lo que se denomina el humanismo cívico, una nueva filosofía de la participación política y de la vida activa.</td>
+                <!--https://www.artehistoria.com/es/contexto/pensamiento-pol%C3%ADtico-renacentista-->
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3">Político</td>
+              </tr>
+              <tr>
+                <td>Político</td>
+                <td><span class="tickblue"></span></td>
+                <td>El feudalismo fue el sistema de organización política, social y económica preponderante en la Edad Media. Con el feudalismo, se creó un nuevo sistema que permitió el equilibrio y la ayuda mutua entre la realeza y la nobleza, dando lugar a un nuevo reparto de poder y riquezas. El modo en el que lo desarrollaron fue el vasallaje, subordinación de los segundos respecto a los primeros.</td>
+                <!--https://www.arteguias.com/politicamedieval.htm-->
+                <td>A lo largo de todo el siglo XV, el feudalismo comenzó a mostrar claros signos de desmoronamiento. A pesar de la persistencia de la sociedad en tres estamentos definidos (nobleza, clero y estado llano)</td>
+                <!--https://blogs.ua.es/pensamientopoliticorenacentista/contexto-politico-del-renacimiento/-->
+
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td colspan="3">Musical</td>
+              </tr>
+              <tr class="compare-row">
+                <td>Musical</td>
+                <td>La música paralos griegos era un arte de los dioses. El termino música lo inven-taron ellos (musiké) y significaba "el arte de las musas".
+
+                  Gracias a las narraciones mitológicas, las pinturas y las cerámicas, sabemos que la música estaba presente en acontecimientos religiosos y sociales, en los banquetes, en las  celebraciones  solemnes  y  en  las  guerras.  Las  famosas  olimpiadas  griegas  también incluían competiciones de música y danza
+                </td>
+                <td>
+                  <p>
+                  En los primeros tiempos, la música medieval recibe dos influencias palpables:
+
+                  Influencia hebrea. Se recoge el modo hebreo de cantar a base de largos melismas y la importancia del canto en el culto.
+                  Influencia grecorromana. Del mundo clásico se hereda la teoría musical con su sistema modal y la valoración ética y educativa de la música expresada por Platón.
+
+                  <b>Canto Gregoriano:</b>La música eclesiástica de los primeros siglos medievales está al servicio del texto litúrgico de los oficios religiosos.
+                  <b>La Música Profana en la Edad Media:</b> La música culta litúrgica es la única que ha quedado plasmada en los códices
+                  <b>La Polifonía: </b>Comienza a tener importancia en el siglo IX. No es una música lineal (monódica), sino que varias voces suenan simultáneamente. Se distinguen tres grandes períodos: el nacimiento de la Polifonía, el Ars Antiqua y el Ars Nova.
+                  </p>
+                  <!--https://www.arteguias.com/musicamedieval.htm-->
+              </td>
+                <td>La música paso a ser un arte no solo cultivado por clérigos, como en la Edad Media, y las canciones de corte popular y sobre todo el madrigal (poema cantado de tema lírico-galante) fueron piezas por las que se sintieron atraídos casi todos los compositores.
+
+                  Durante el siglo XV se impuso la polifonía a la flamenca, que logro una perfecta adecuación entre texto y música.
+                  
+                  Los maestros flamencos viajaron por toda Europa, llegando a imponerse en la propia Italia, a pesar de su fuerte tradición musical.</td>
+
+                  <!--https://www.musicaantigua.com/el-renacimiento-una-etapa-corta-pero-de-las-mas-importantes-dentro-de-la-historia-de-la-musica/-->
+              </tr>
+              
+            </tbody>
+          </table>
+        
+        </div>
+
+
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+
+
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="text-center">
+          <h3>Bibliografía</h3>
+          <p> Enríquez, M. (1991). Historia de la música: De la antigüedad hasta el renacimiento. Recuperado de <a href="http://iesvilladesotillo.centros.educa.jcyl.es/sitio/upload/Libro_de_3_ESO._musica.pdf">iesvilladesotillo</a> </p>
+          <p> Griffiths, P. (2012). Breve historia de la música occidental. Recuperado de <a href="https://elibronet.bibliotecavirtual.unad.edu.co/es/ereader/unad/49619?page=1">elibronet</a> </p>
+          <p> [1]. Griffiths, P. (2012). Breve historia de la música occidental. Página 10 </p>
+          <p> [2]. Griffiths, P. (2012). Breve historia de la música occidental. Página 30 </p>
+          <p> [3]. Griffiths, P. (2012). Breve historia de la música occidental. Página 50 </p>
+        </div>
+      </div>
+    </section><!-- End Cta Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>OnePage</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
